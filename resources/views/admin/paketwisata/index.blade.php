@@ -10,7 +10,7 @@
             <div class="card-body">
                 <div class="table-responsive">
                     <a href="{{route('pktwisata.create')}}" class="btn
-btn-primary mb-2"><i class="fa fa-plus"></i>
+btn-primary mb-2">
                         Tambah
                     </a>
                     <table class="table table-hover table-bordered
@@ -18,7 +18,6 @@ table-stripped" id="example2">
                         <thead>
                             <tr>
                                 <th>No.</th>
-                                <th>Id Paket Wisata</th>
                                 <th>Nama Paket</th>
                                 <th>Deskirpsi</th>
                                 <th>Fasilitas</th>
@@ -36,7 +35,6 @@ table-stripped" id="example2">
                             @foreach($pktwisata as $key => $pw)
                             <tr>
                                 <td>{{$key+1}}</td>
-                                <td>{{$pw->id}}</td>
                                 <td id={{$key+1}}>{{$pw->nama_paket}}</td>
                                 <td id={{$key+1}}>{{$pw->deskripsi}}</td>
                                 <td id={{$key+1}}>{{$pw->fasilitas}}</td>
@@ -65,12 +63,10 @@ table-stripped" id="example2">
                                 <td>
                                     <a href="{{route('pktwisata.edit',
 $pw)}}" class="btn btn-primary btn-xs"><i class="fas fa-pen" aria-hidden="true"></i>
-                                        Edit
                                     </a>
                                     <a href="{{route('pktwisata.destroy', $pw)}}"
                                         onclick="notificationBeforeDelete(event, this, <?php echo $key+1; ?>)"
                                         class="btn btn-danger btn-xs"><i class="fa fa-trash" aria-hidden="true"></i>
-                                        Delete
                                     </a>
                                 </td>
                             </tr>

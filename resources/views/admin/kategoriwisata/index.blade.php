@@ -9,7 +9,7 @@
         <div class="card">
             <div class="card-body">
                 <a href="{{route('ktwisata.create')}}" class="btn
-btn-primary mb-2"><i class="fa fa-plus"></i>
+btn-primary mb-2">
                     Tambah
                 </a>
                 <table class="table table-hover table-bordered
@@ -17,7 +17,6 @@ table-stripped" id="example2">
                     <thead>
                         <tr>
                             <th>No.</th>
-                            <th>Id Kategori Wisata</th>
                             <th>Kategori Wisata</th>
                             <th>Opsi</th>
                         </tr>
@@ -26,17 +25,14 @@ table-stripped" id="example2">
                         @foreach($ktwisata as $key => $kw)
                         <tr>
                             <td id={{$key+1}}>{{$key+1}}</td>
-                            <td id={{$key+1}}>{{$kw->id}}</td>
                             <td id={{$key+1}}>{{$kw->kategori_wisata}}</td>
                             <td>
                                 <a href="{{route('ktwisata.edit',
 $kw)}}" class="btn btn-primary btn-xs"><i class="fas fa-pen" aria-hidden="true"></i>
-                                    Edit
                                 </a>
                                 <a href="{{route('ktwisata.destroy', $kw)}}"
                                     onclick="notificationBeforeDelete(event, this, <?php echo $key+1; ?>)"
                                     class="btn btn-danger btn-xs"><i class="fa fa-trash" aria-hidden="true"></i>
-                                    Delete
                                 </a>
                             </td>
                         </tr>

@@ -11,7 +11,7 @@
                 <div class="table-responsive">
 
                     <a href="{{route('reservasi.create')}}" class="btn
-                    btn-primary mb-2"><i class="fa fa-plus"></i>
+                    btn-primary mb-2">
                         Tambah
                     </a>
                     <table class="table table-hover table-bordered
@@ -19,7 +19,6 @@
                         <thead>
                             <tr>
                                 <th>No.</th>
-                                <th>Id Reservasi</th>
                                 <th>Id Pelanggan</th>
                                 <th>Id Paket</th>
                                 <th>Tanggal Reservasi</th>
@@ -37,12 +36,9 @@
                             @foreach($reservasi as $key => $rv)
                             <tr>
                                 <td>{{$key+1}}</td>
-                                <td>{{$rv->id}}</td>
                                 <td id={{$key+1}}>{{$rv->fpelanggan->nama_lengkap}}</td>
                                 <td id={{$key+1}}>{{$rv->fpaket->nama_paket}}</td>
                                 <td id={{$key+1}}>{{$rv->tgl_reservasi_wisata}}</td>
-
-
                                 <td id={{$key+1}}>{{ 'Rp ' . number_format($rv->harga, 0, ',', '.') }}</td>
                                 <td id={{$key+1}}>{{$rv->jumlah_peserta}}</td>
                                 <td id={{$key+1}}>{{ $rv->diskon ? $rv->diskon . '%' : '-' }}</td>
@@ -56,12 +52,11 @@
 
                                 <td>
                                     <a href="{{route('reservasi.edit', $rv)}}" class="btn btn-primary btn-xs">
-                                        <i class="fas fa-pen" aria-hidden="true"></i> Edit
+                                        <i class="fas fa-pen" aria-hidden="true"></i> 
                                     </a>
                                     <a href="{{route('reservasi.destroy', $rv)}}"
                                         onclick="notificationBeforeDelete(event, this, <?php echo $key+1; ?>)"
                                         class="btn btn-danger btn-xs">
-                                        Delete
                                     </a>
                                 </td>
                             </tr>

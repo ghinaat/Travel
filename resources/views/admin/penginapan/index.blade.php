@@ -10,7 +10,7 @@
             <div class="card-body">
                 <div class="table-responsive">
                     <a href="{{route('penginapan.create')}}" class="btn
-                    btn-primary mb-2"><i class="fa fa-plus"></i>
+                    btn-primary mb-2">
                         Tambah
                     </a>
                     <table class="table table-hover table-bordered
@@ -18,7 +18,6 @@
                         <thead>
                             <tr>
                                 <th>No.</th>
-                                <th>Id Penginapan</th>
                                 <th>Nama Penginapan</th>
                                 <th>Deskripsi</th>
                                 <th>Fasilitas</th>
@@ -34,7 +33,6 @@
                             @foreach($penginapan as $key => $pn)
                             <tr>
                                 <td>{{$key+1}}</td>
-                                <td>{{$pn->id}}</td>
                                 <td id={{$key+1}}>{{$pn->nama_penginapan}}</td>
                                 <td id={{$key+1}}>{{$pn->deskripsi}}</td>
                                 <td id={{$key+1}}>{{$pn->fasilitas}}</td>
@@ -65,12 +63,12 @@
                                 </td>
                                 <td>
                                     <a href="{{route('penginapan.edit', $pn)}}" class="btn btn-primary btn-xs">
-                                        <i class="fas fa-pen" aria-hidden="true"></i> Edit
+                                        <i class="fas fa-pen" aria-hidden="true"></i>
                                     </a>
                                     <a href="{{route('penginapan.destroy', $pn)}}"
                                         onclick="notificationBeforeDelete(event, this, <?php echo $key+1; ?>)"
                                         class="btn btn-danger btn-xs">
-                                        <i class="fa fa-trash" aria-hidden="true"></i> Delete
+                                        <i class="fa fa-trash" aria-hidden="true"></i> 
                                     </a>
                                 </td>
                             </tr>

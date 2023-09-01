@@ -12,14 +12,13 @@
 
                     <a href="{{route('berita.create')}}" class="btn
                     btn-primary mb-2">
-                        <i class="fa fa-plus"></i> Tambah
+                        Tambah
                     </a>
                     <table class="table table-hover table-bordered
                         table-stripped" id="example2">
                         <thead>
                             <tr>
                                 <th>No.</th>
-                                <th>Id Berita</th>
                                 <th>Judul</th>
                                 <th>Berita</th>
                                 <th>Tanggal Upload</th>
@@ -32,7 +31,6 @@
                             @foreach($berita as $key => $br)
                             <tr>
                                 <td>{{$key+1}}</td>
-                                <td>{{$br->id}}</td>
                                 <td id={{$key+1}}>{{$br->judul}}</td>
                                 <td id={{$key+1}}>{{$br->berita}}</td>
                                 <td id={{$key+1}}>{{$br->tgl_post}} </td>
@@ -44,12 +42,12 @@
 
                                 <td>
                                     <a href="{{route('berita.edit', $br)}}" class="btn btn-primary btn-xs">
-                                        <i class="fas fa-pen" aria-hidden="true"></i> Edit
+                                        <i class="fas fa-pen" aria-hidden="true"></i> 
                                     </a>
                                     <a href="{{route('berita.destroy', $br)}}"
                                         onclick="notificationBeforeDelete(event, this, <?php echo $key+1; ?>)"
                                         class="btn btn-danger btn-xs">
-                                        <i class="fa fa-trash" aria-hidden="true"></i> Delete
+                                        <i class="fa fa-trash" aria-hidden="true"></i> 
                                     </a>
                                 </td>
                             </tr>

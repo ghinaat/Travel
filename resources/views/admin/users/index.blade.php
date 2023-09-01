@@ -11,7 +11,7 @@
             <div class="card-body">
                 <div class="table-responsive">
                     <a href="{{route('users.create')}}" class="btn btn-primary mb-2">
-                        <i class="fa fa-plus"></i> Tambah
+                       Tambah
                     </a>
                     <table class="table table-hover table-bordered
 table-stripped" id="example2">
@@ -34,12 +34,10 @@ table-stripped" id="example2">
                                 <td>
                                     <a href="{{route('users.edit',
 $user)}}" class="btn btn-primary btn-xs"><i class="fas fa-pen" aria-hidden="true"></i>
-                                        Edit
                                     </a>
                                     <a href="{{route('users.destroy', $user)}}"
                                         onclick="notificationBeforeDelete(event, this, <?php echo $key+1; ?>)"
                                         class="btn btn-danger btn-xs"><i class="fa fa-trash" aria-hidden="true"></i>
-                                        Delete
                                     </a>
                                 </td>
                             </tr>

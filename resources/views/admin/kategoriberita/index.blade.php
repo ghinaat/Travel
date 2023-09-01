@@ -15,7 +15,7 @@
 btn-primary mb-2"> Tambah </a>
                     @else
                     <a href="{{route('ktberita.create')}}" class="btn
-btn-primary mb-2"> <i class="fa fa-plus"></i>Tambah</a>
+btn-primary mb-2">Tambah</a>
                     @endif
 
 
@@ -24,7 +24,6 @@ table-stripped" id="example2">
                         <thead>
                             <tr>
                                 <th>No.</th>
-                                <th>Id Kategori Berita</th>
                                 <th>Kategori Berita</th>
                                 <th>Opsi</th>
                             </tr>
@@ -32,18 +31,16 @@ table-stripped" id="example2">
                         <tbody>
                             @foreach($ktberita as $key => $kb)
                             <tr>
-                                <td id={{$key+1}}>{{$key+1}}</td>
                                 <td id={{$key+1}}>{{$kb->id}}</td>
                                 <td id={{$key+1}}>{{$kb->kategori_berita}}</td>
                                 <td>
                                     <a href="{{route('ktberita.edit',
 $kb)}}" class="btn btn-primary btn-xs"><i class="fas fa-pen" aria-hidden="true"></i>
-                                        Edit
+                                      
                                     </a>
                                     <a href="{{route('ktberita.destroy', $kb)}}"
                                         onclick="notificationBeforeDelete(event, this, <?php echo $key+1; ?>)"
                                         class="btn btn-danger btn-xs"><i class="fa fa-trash" aria-hidden="true"></i>
-                                        Delete
                                     </a>
                                 </td>
                             </tr>

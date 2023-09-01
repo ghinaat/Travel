@@ -11,7 +11,7 @@
                 <div class=table-responsive>
 
                     <a href="{{route('TKaryawan.create')}}" class="btn
-btn-primary mb-2"><i class="fa fa-plus"></i>
+btn-primary mb-2">
                         Tambah
                     </a>
                     <table class="table table-hover table-bordered
@@ -19,7 +19,6 @@ table-stripped" id="example2">
                         <thead>
                             <tr>
                                 <th>No.</th>
-                                <th>Id Karyawan</th>
                                 <th>Nama Karyawan</th>
                                 <th>Alamat</th>
                                 <th>Nomer Telepon</th>
@@ -32,7 +31,6 @@ table-stripped" id="example2">
                             @foreach($Tkaryawan as $key => $kr)
                             <tr>
                                 <td>{{$key+1}}</td>
-                                <td id={{$key+1}}>{{$kr->id}}</td>
                                 <td id={{$key+1}}>{{$kr->nama_karyawan}}</td>
                                 <td id={{$key+1}}>{{$kr->alamat}}</td>
                                 <td id={{$key+1}}>{{$kr->no_hp}}</td>
@@ -41,11 +39,10 @@ table-stripped" id="example2">
                                 <td>
                                     <a href="{{route('TKaryawan.edit',
 $kr)}}" class="btn btn-primary btn-xs"><i class="fas fa-pen" aria-hidden="true"></i>
-                                        Edit
                                     </a>
                                     <a href="{{route('TKaryawan.destroy',
 $kr)}}" onclick="notificationBeforeDelete(event, this, <?php echo $key+1; ?>)" class="btn btn-danger btn-xs">
-                                        <i class="fa fa-trash" aria-hidden="true"></i>Delete
+                                        <i class="fa fa-trash" aria-hidden="true"></i>
                                     </a>
 
                                 </td>
